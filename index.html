@@ -1,37 +1,695 @@
-## Welcome to GitHub Pages
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>实习报告</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-You can use the [editor on GitHub](https://github.com/zhixiang19/zhixiang19.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-### Markdown
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-```markdown
-Syntax highlighted code block
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-# Header 1
-## Header 2
-### Header 3
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-- Bulleted
-- List
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
 
-1. Numbered
-2. List
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
 
-**Bold** and _Italic_ and `Code` text
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
 
-[Link](url) and ![Image](src)
-```
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
 
-### Jekyll Themes
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zhixiang19/zhixiang19.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
 
-### Support or Contact
+mark {
+	background-color: transparent;
+}
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="715b793a-d58f-4f51-b8c5-ebbe5791632d" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_ibm_type_704.jpg" style="object-position:center 19.03%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💻</span></div><h1 class="page-title">实习报告</h1></header><div class="page-body"><p id="d13fe9ca-3808-4e92-a4d5-5caf4bdd4bd0" class=""><strong>目录</strong></p><nav id="22c4044a-b6ad-4aa7-997d-3c0eb3dcbab9" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ac60291d-976c-4c34-8610-c0f0d28b3f1a">1、企业介绍及主要特点描述；</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#284f6b30-334c-453a-a6e1-7baa48835257">2、实习工作职责、内容及效果总结；</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0a28d98e-285f-4e28-9e16-d3e4bdf81bab">实习工作职责：产品经理助理</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#21ca8baa-7f4f-452e-8bda-967fd3350f07">内容及效果总结</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#39c5dbdb-7faa-4fb7-bea6-d4a2e95fa743">3、企业运行、管理及技术方面的认识及体会</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a28a9aba-40d9-49ac-9f25-7bf95ca2fe46">企业运行与管理</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e80c2272-a59b-49d3-b768-ed9ccd6d3645">技术方面</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c5fbf295-ad96-4a4a-beec-fb004ddd73c2">4、收获及心得</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#dc7fc03d-5d5f-48f6-bd4e-e868503de076">一些较显性的收获</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e6be8698-0b30-4255-a6ed-392fb977a3a4">一些实习期间的思考</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#81c7e6e9-d06d-4e07-890d-34f6e34c7ffd">5、企业实习证明</a></div></nav><h2 id="ac60291d-976c-4c34-8610-c0f0d28b3f1a" class="">1、企业介绍及主要特点描述；</h2><ul id="6b6ccfdd-8419-43ab-85fa-21e14d8643a9" class="bulleted-list"><li><strong>企业名称：Nolibox</strong></li></ul><figure id="0fd6123f-3aef-4bed-86e9-6705587877ff" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled.png"><img style="width:720px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled.png"/></a></figure><h2 id="284f6b30-334c-453a-a6e1-7baa48835257" class="">2、实习工作职责、内容及效果总结；</h2><h3 id="0a28d98e-285f-4e28-9e16-d3e4bdf81bab" class="">实习工作职责：产品经理助理</h3><h3 id="21ca8baa-7f4f-452e-8bda-967fd3350f07" class="">内容及效果总结</h3><div id="6f7d8a0e-0dea-4a15-ba19-4c1f05d5c494" class="collection-content"><h4 class="collection-title">内容排期表</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>工作内容</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>时间</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>涉及领域</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>锻炼的能力</th></tr></thead><tbody><tr id="8eb75bdd-4164-44f3-9d67-0ac875337861"><td class="cell-title"><a href="https://www.notion.so/8eb75bdd416444f39d670ac875337861"><span class="icon">👨🏼‍💻</span>软件著作权文书编写</a></td><td class="cell-\RF`"><span class="selected-value select-value-color-orange">7月13日-7月23日</span></td><td class="cell-eu?["><span class="selected-value select-value-color-yellow">产品</span><span class="selected-value select-value-color-brown">文书</span></td><td class="cell-q:LB"><span class="selected-value">对软件功能的理解</span><span class="selected-value select-value-color-orange">流畅精准的表达</span></td></tr><tr id="2f2822d5-8694-446a-9b92-6d94c1de6c5a"><td class="cell-title"><a href="https://www.notion.so/2f2822d58694446a9b926d94c1de6c5a"><span class="icon">🌐</span>标签系统置信度算法的编写</a></td><td class="cell-\RF`"><span class="selected-value select-value-color-default">7月23日-8月4日</span></td><td class="cell-eu?["><span class="selected-value select-value-color-yellow">产品</span><span class="selected-value select-value-color-red">算法</span></td><td class="cell-q:LB"><span class="selected-value select-value-color-brown">对算法逻辑的接触</span><span class="selected-value select-value-color-green">解决问题的能力</span></td></tr><tr id="d8579ee9-8d5c-47b3-801a-9a7ec193e1f6"><td class="cell-title"><a href="https://www.notion.so/figma-d8579ee98d5c47b3801a9a7ec193e1f6"><span class="icon">🕹️</span>基于figma的插件开发</a></td><td class="cell-\RF`"><span class="selected-value select-value-color-purple">8月16日-9月3日</span></td><td class="cell-eu?["><span class="selected-value select-value-color-yellow">产品</span><span class="selected-value select-value-color-default">设计</span></td><td class="cell-q:LB"><span class="selected-value select-value-color-yellow">开发流程的接触</span><span class="selected-value select-value-color-gray">需求的处理</span></td></tr><tr id="70e35893-d8cc-42b9-afda-56ee3ab524b1"><td class="cell-title"><a href="https://www.notion.so/70e35893d8cc42b9afda56ee3ab524b1"><span class="icon">🕐</span>图片素材标签的确立（合作）</a></td><td class="cell-\RF`"><span class="selected-value select-value-color-green">8月4日-8月16日</span></td><td class="cell-eu?["><span class="selected-value select-value-color-default">设计</span></td><td class="cell-q:LB"><span class="selected-value select-value-color-blue">总结归纳的能力</span><span class="selected-value select-value-color-green">解决问题的能力</span></td></tr></tbody></table></div><hr id="d1f88335-fd41-4850-9e0d-8fd495af1bce"/><blockquote id="c73b0524-2c3a-463f-87e5-f880647f9639" class=""><strong>进行软件著作权申请文件的梳理，编写共12份软件说明书，最终在中国版权保护中心全部进行投送并最终申请通过。</strong></blockquote><ul id="c04daef9-bd42-42ca-bdee-c4a2aadf4f42" class="bulleted-list"><li>在此部分工作中，软件软件说明书的主要包括<strong>软件设计背景</strong>、<strong>软件设计目标</strong>、系统设计原则与<strong>软件功能介绍</strong>以及<strong>软件流程说明</strong></li></ul><div id="7ded2ebe-2c77-46d9-9c54-94457efa1054" class="column-list"><div id="7659ba2e-79de-4a2d-9745-f027d9dcd6d3" style="width:33.33333333333333%" class="column"><ol type="1" id="1b3f1485-98a2-4514-90af-c04131a6ddd7" class="numbered-list" start="1"><li><strong>软件设计背景</strong>：解释说明此软件设计的背景是如何，即什么情况下使得此软件是必要的。</li></ol><p id="9409210f-ab43-4cfe-8861-790364724754" class="">
+</p></div><div id="8143dcc6-5fb6-4606-bf04-03a22dfa26c1" style="width:29.166666666666664%" class="column"><ol type="1" id="18ceb0a1-a618-42c8-90da-5c01be344b3d" class="numbered-list" start="2"><li><strong>软件设计目标</strong>：以精简凝练的语言对软件的整体功能以及设计目的进行介绍</li></ol></div><div id="bcf8dce5-3460-4ed3-8da1-bdaf2db96b2f" style="width:37.49999999999999%" class="column"><ol type="1" id="72946a68-95b9-4a85-ac09-2574a6a2e485" class="numbered-list" start="3"><li><strong>系统设计原则</strong>：包括统一设计原则、先进性原则、可靠、高安全性原则、标准化原则、成熟性原则、适用性原则、可扩展性原则</li></ol></div></div><div id="dfddcb5a-fce7-4c96-9666-0b772adc0b6e" class="column-list"><div id="7b5fc9db-21d1-4711-8291-6a049ac3fdd5" style="width:33.33333333333333%" class="column"><ol type="1" id="366d88b3-6ce4-4573-a2b3-e42156d00651" class="numbered-list" start="4"><li><strong>软件功能介绍</strong>：详细并分模块地对本软件的功能进行介绍，阐明软件的功能逻辑</li></ol></div><div id="a120d252-57b5-4b2c-93fe-0f0e7ab16419" style="width:29.166666666666668%" class="column"><ol type="1" id="1906a9f0-5fdc-41b5-a2c3-84efcced7ad8" class="numbered-list" start="5"><li><strong>软件流程说明</strong>：此部分详细且分步骤地向软件的使用者说明此软件如何操作，类似于药物说明书</li></ol></div><div id="61fed4af-8373-478d-aa45-bb61b99352db" style="width:37.49999999999999%" class="column"><p id="99dc6eb9-5826-4cdc-91b8-a74efd13be35" class="">                                                                      </p></div></div><ul id="34f899e9-4052-437a-be37-997231154072" class="bulleted-list"><li><strong>部分结果图片展示</strong></li></ul><ul id="0008adc0-7982-4c81-a11c-1a38a0fd4401" class="bulleted-list"><li>软件说明书内容展示<figure id="fcae3f6b-f259-42e8-b2f2-ff153179d302" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%201.png"><img style="width:1835px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%201.png"/></a></figure><figure id="f858b370-b9f3-4db5-871a-2a73976e78e1" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%202.png"><img style="width:1835px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%202.png"/></a></figure><figure id="55d076f7-7f45-44fb-8d11-01a02c6140c8" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%203.png"><img style="width:1835px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%203.png"/></a></figure></li></ul><ul id="91d7c917-2f74-4e90-928f-912bdba01bf4" class="bulleted-list"><li>软件投送申请展示</li></ul><div id="2d597c10-99b4-4339-9ce8-9a299547e7ac" class="column-list"><div id="f328a5cd-20be-4774-b81a-a79a53c69e0b" style="width:8.333333333333334%" class="column"><p id="d63902bf-b889-4a69-aed6-844e62444104" class="">              </p></div><div id="bb12a1af-2add-452a-85f1-423934362a63" style="width:22.916666666666664%" class="column"><figure id="6d138032-4073-4b96-bd38-f9be8ebdd9a5" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%204.png"><img style="width:96px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%204.png"/></a></figure></div><div id="687a3a2b-cd48-4b10-ab5e-3eb85c059dfb" style="width:22.916666666666664%" class="column"><figure id="5d48d54f-14a4-4079-a3ab-980b57fa2688" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%205.png"><img style="width:96px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%205.png"/></a></figure></div><div id="a52af8c5-5921-4bce-bbd0-f727d1a2b5ba" style="width:20.83333333333334%" class="column"><figure id="55dc296f-9127-4217-8337-eaca10fda436" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%206.png"><img style="width:96px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%206.png"/></a></figure></div><div id="8694ae08-c13a-4c7a-b6d6-9b18951031da" style="width:22.9166666666667%" class="column"><figure id="db19abc4-4f50-429a-ba53-5248088f16fc" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%207.png"><img style="width:96px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%207.png"/></a></figure></div><div id="d0227779-310f-48d0-a5ad-0a3e877d7d4a" style="width:2.083333333333333%" class="column"><p id="11a1155d-243a-4182-a516-d78ad3949461" class="">    </p></div></div><ul id="a8912fce-b525-4bd7-b453-3e52cf590e82" class="bulleted-list"><li><strong>文本内容部分展示</strong><ol type="1" id="4599cd7a-57d9-4202-8316-beb32a173861" class="numbered-list" start="1"><li>软件设计背景<p id="6a593eb9-e083-466f-b356-fbd5fa5c8b19" class=""><strong>对软件开发的背景进行介绍，表达要求凝练清晰，能让读者体会到此软件的重要性。</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4b30dcd7-a969-4b76-a682-c5c50c1b061f"><div style="font-size:1.5em"><span class="icon">📃</span></div><div style="width:100%">在平面设计领域中，对原创图片素材的版权保护和外部图片素材的合理使用是设计师们长期受困扰的问题。当设计师需要使用外部图片素材时，搜索的图片因找不到授权信息而难以判断是否可以使用。而创作者面对原创版权素材被二次处理（例如抠图、局部截取或对矢量图进行元素提取等）后在媒体平台上流传的情况，也难以进行版权维护。而产生这些问题的根源在于，创作者与使用者无法有效地对图片素材进行溯源管理。</div></figure></li></ol><ol type="1" id="d274c967-cd92-4a1c-bf3a-60a1f8fc7cbb" class="numbered-list" start="2"><li>软件设计目标<p id="9c9b1634-b5c8-4122-88b5-f95347e908a9" class=""><strong>一两句话对软件最重要的功能以及希望实现的目标进行总结</strong></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9a5041ed-1f2c-4a5c-ad74-47d0dfb7a8e2"><div style="font-size:1.5em"><span class="icon">📃</span></div><div style="width:100%">本软件基于设计知识和计算机算法，通过对静态Logo的智能识别与效果匹配，实现多样化的动态Logo效果的快速生成。借助本软件，用户可实现将输入的静态Logo快速拓展为动态Logo，从而获得更生动，更具视觉表现力的图标设计结果。</div></figure></li></ol><ol type="1" id="65b39d6f-b18c-4079-9ed5-ee36623a800a" class="numbered-list" start="3"><li>软件功能介绍<p id="dc18c802-d3de-4167-9390-b2078b6cd571" class=""><strong>图文并茂的方式层级化地以清晰的说明化语言对于软件的功能进行准确介绍，展示清楚软件的所有功能</strong></p><figure id="e36483e1-09be-4971-b83f-e955ff871384" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%208.png"><img style="width:1124px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%208.png"/></a></figure></li></ol><p id="adee808b-321d-481f-97be-4ecec981386a" class="">4.软件流程说明<div class="indented"><p id="2bb8444a-5c42-40e9-8ebe-d379b82bc56e" class=""><strong>以清晰的语言对包括启动与退出，如何反馈，如何展示等功能的详细操作步骤进行描述，需要逻辑顺畅，思路清晰</strong></p><figure id="4eba10c4-3452-4ae3-aa88-ccc9dc09c792" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%209.png"><img style="width:624px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%209.png"/></a></figure></div></p></li></ul><hr id="1569ff06-b708-49e6-ab89-cb56231da936"/><blockquote id="eea9fb16-bc39-4fdb-b9f7-3eebc4d931ea" class=""><strong>编写中台图库置信度算法，多次改版验证之后在产品中加以应用</strong></blockquote><ul id="9f1b0990-48f5-4a5c-bbaa-d08801326169" class="bulleted-list"><li><strong>项目背景</strong></li></ul><p id="f0d7e9a4-355d-4e58-b97a-e7276d4e26d3" class="">由于人工智能设计项目涉及智能匹配与机器识别的属性，数据库的支持就显得不可或缺。而在此具体项目之中，数据库的内涵是指带有全面标签信息的版权图片库。而由于技术与成本的限制，此数据库的建立大部分依赖人力完成。而如何架构一个完善的中台管理系统，快速响应前端的需求与保持后台的稳定性，成为了项目中需要解决的问题。<strong>而由于图片数据的标签需要人工标注，需要置信度算法以有效地验证标签是否可信。</strong></p><p id="33b91430-952b-40ec-8630-2493b6cf5fb5" class="">中台图库打标签及管理系统部分高保真展示</p><figure id="1e69caac-4674-4380-a8df-28b195ad8a6e" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2010.png"><img style="width:672px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2010.png"/></a></figure><figure id="de4494d6-50ba-4797-a22c-986bc67059d7" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2011.png"><img style="width:672px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2011.png"/></a></figure><ul id="a95ae8f6-4265-48e0-a40a-e4b7b57a3203" class="bulleted-list"><li><strong>项目需求</strong></li></ul><div id="0e2c9b7b-aa81-465c-b467-f203c08302bf" class="column-list"><div id="7ecd968e-c409-4695-b8be-3d5c8cded098" style="width:50%" class="column"><p id="8ee26141-a500-4e77-a695-e7e2a8e0ab1c" class="">以多个标签标注人员所打出的标签数据作为依据，利用算法进行处理，得到置信度结果，设定合理的阈值，超过阈值的置信度被认为是标签可信。 </p><figure id="cb0b4e03-5eea-490f-baa7-116dc6d5a059" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2012.png"><img style="width:192px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2012.png"/></a></figure></div><div id="6aa62b1d-727f-4252-ae42-ab710db1096d" style="width:93.75%" class="column"><figure id="89364ceb-55c7-4522-8a28-d72928aa7c7b" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2013.png"><img style="width:480px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2013.png"/></a></figure></div></div><ul id="94cac5f5-87ea-420a-98d0-c112ca1b7d72" class="bulleted-list"><li><strong>算法研究</strong></li></ul><div id="70a71642-a17b-4889-9ea7-cd62c455a8cb" class="column-list"><div id="f04a4602-e5b6-4f5f-a040-5caf10e82d47" style="width:68.75%" class="column"><figure id="c7c4f8ae-9ec1-465b-87e7-95f02ee0ef71" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2014.png"><img style="width:1020px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2014.png"/></a></figure></div><div id="635fc69c-d54f-4f25-a197-f31de0191af5" style="width:31.250000000000007%" class="column"><figure id="506e8bda-1003-4848-b86d-fe6f4c3393a6" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2015.png"><img style="width:336px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2015.png"/></a></figure></div></div><ul id="5cdf58a3-54fa-47cc-b330-357803833eeb" class="bulleted-list"><li>本算法是在熵算法的基础之上进行改良，下主要对比两者进行介绍</li></ul><figure id="e2fe09c3-8d14-4b40-9079-3f9e01d8a8f5" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2016.png"><img style="width:528px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2016.png"/></a></figure><div id="e1dbf166-1b5a-4601-bc94-587497761a9a" class="column-list"><div id="a218e26f-8793-47da-90ee-dd8e66fb3b8d" style="width:50%" class="column"><figure id="fb5b4875-756e-43d4-b84a-8eb06735c096" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2017.png"><img style="width:415px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2017.png"/></a></figure></div><div id="7057eaad-b577-4ae9-a75d-4ea5c65f43a7" style="width:50%" class="column"><figure id="35533542-b7b0-473e-b00e-f1e58d5fcf4c" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2018.png"><img style="width:414px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2018.png"/></a></figure></div></div><p id="7423bc21-3e60-46d3-9316-336688f9c82a" class="">主要从有效列算法、标签量加权以及数据后处理三个方面进行考量，最终实现了对各种情况的有效应对，弥补了基础的熵算法区分度低、指标重合、阈值难以选取的问题。</p><ul id="e2b48d80-326e-4371-ad7e-94ecec4f6945" class="bulleted-list"><li><strong>算法实现</strong></li></ul><p id="692f5a76-7d95-4e38-ba4a-a825223c4b11" class="">敲定算法以及进行数据测试之后，与开发部门配合，实现了对于打标签系统置信度算法样例的开发</p><p id="66dca737-1fd2-413e-ae1f-bba2c5333165" class="">生成效果如下（实现表格的自生成与计算）</p><div id="b094c3e5-6dbf-4864-af51-08d303d35214" class="column-list"><div id="f41c446e-5dfd-4b57-9cb1-7f2ff708ba95" style="width:25%" class="column"><figure id="3c1c2fa2-139a-4ad3-95c5-893ec13d26e8" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2019.png"><img style="width:340px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2019.png"/></a></figure></div><div id="536d6609-94d5-4832-8aa8-91d6e4d0fdac" style="width:75%" class="column"><figure id="b5990865-dad8-41de-aed3-59ab4988c1ce" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2020.png"><img style="width:1564px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2020.png"/></a></figure></div></div><pre id="48061f33-3371-4822-89dd-3653b2925f25" class="code"><code># 部分算法展示
+def cal(st):
+    n = col
+    n1 = 0
+    t = col * row
+    t1 = 0
+
+    p0 = [0] * col
+    p = [0] * col
+    r = [0] * col
+    value = [0] * col
+
+    # A:65 B:66 Q:81
+    for i in range(66, 66 + col):
+
+        dataRange = chr(i) + str(st + 1) + &#x27;:&#x27; + chr(i) + str(st + row)
+        data = sheet.range(dataRange).value
+        count = get_count_per_col(data)
+        p0[i - 66] = count / row
+
+        t1 += count
+        if count &gt; 0:
+            n1 += 1
+
+    if n1 == 0:
+        return None
+
+    for i in range(0, col):
+        p[i] = p0[i] / n1
+
+    H1 = 0
+    
+    for i in range(0, len(p)):
+        if p[i] == 0:
+            continue
+        H1 += p[i] * math.log(p[i])
+    H1 *= -1
+
+    if H1 == 0:
+        H1 = 0.001
+
+    H2 = math.log(col)
+
+    for i in range(0, len(p)):
+        r[i] = p[i] * H2 / H1 * t1 / t
+        value[i] = math.atan(r[i] * n) * 2 / math.pi
+    
+    return value
+
+
+def get_count_per_col(arr):
+    count = 0
+    # print(&#x27;getNum&#x27;)
+    for item in arr:
+        if item == 1:
+            count += 1
+    return count</code></pre><hr id="4ea33724-e8f0-4fdc-b4d9-90885bb40a06"/><blockquote id="f6ef82dc-e78b-4a72-a21c-c83c06185308" class=""><strong>合作对图片素材标签系统的标签分类进行梳理和总结，为之后的打标签工作提供理论基础</strong></blockquote><ul id="eb4dfd6e-0a9d-4e41-895b-05f74b587506" class="bulleted-list"><li><strong>项目需求</strong></li></ul><p id="33d4c1c4-0a05-4b30-a904-6bd9e4fb514f" class="">由于版权图片需要以标签进行数据化，而上述的中台图库管理系统就是为了标签标注的管理。而标签标注的具体种类，即标签字典，需要有设计知识的人对图片的各个维度的信息（如内容，风格，时令，纹理等）进行总结分类，使得标签重叠度低且覆盖完全。</p><ul id="8f916550-024f-486d-967b-a4d5da154129" class="bulleted-list"><li><strong>结果展示</strong></li></ul><ul id="80463fd9-2243-4294-8b80-b088ceeea38c" class="bulleted-list"><li>总体共将图片素材分为十五个大类，每个大类又分为抽象与具体两个小类，每一类别有着不同的标签维度，分类与维度的关系如图所示：</li></ul><div id="f3b032a4-d16a-42aa-b4f3-8014c8ad1266" class="column-list"><div id="632f9770-e3f5-45da-aeac-22d490886aac" style="width:12.5%" class="column"><figure id="17485bfe-c6a1-4fa9-8a73-bf24af622b11" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2021.png"><img style="width:108px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2021.png"/></a></figure></div><div id="c8d22119-e394-4f62-9d7d-2c2fa9022150" style="width:87.5%" class="column"><ul id="2a3f4f89-74f5-4530-a215-122c252b19eb" class="bulleted-list"><li>最终对每个维度的标签内容进行确定，最多的维度中含有100以上的标签种类<figure id="4184c8d7-e62d-4892-8a7d-aae66c65911a" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2022.png"><img style="width:1744px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2022.png"/></a></figure><figure id="e1d72459-0243-431f-8770-034f764e56ee" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2023.png"><img style="width:688px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2023.png"/></a></figure></li></ul></div></div><hr id="eb0fccd3-d9cd-4878-b833-8e6d9ebd8eaf"/><blockquote id="df937761-d7cf-4530-bf69-c658e036a1b9" class=""><strong>作为产品经理参与基于figma的图库效果插件的开发，包括前期调研，需求文档梳理，低保真设计与高保真设计，与前端开发进行对接。离职时此项目的一期工程进展过半</strong></blockquote><ul id="e2d4cf12-210a-4106-b724-4344599e9f26" class="bulleted-list"><li><strong>前期调研</strong></li></ul><div id="0a539de8-07fc-45a4-9121-107f3190b64e" class="column-list"><div id="0746fc4b-8161-4bf3-8c2d-04d4ed21b8c5" style="width:50%" class="column"><p id="7ce1cb68-57f1-4346-b176-31a9b6a5f749" class="">根据公司海报产品的整体逻辑以及实际资源策略，确定了在figma平台上进行插件开发以供设计师使用的策略，最终的整体逻辑如下图所示：</p><figure id="02fd0176-cdb0-4c7b-ab7c-9d9b30074814" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2024.png"><img style="width:432px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2024.png"/></a></figure></div><div id="bf27f09f-f316-424a-a338-1386e44b5d12" style="width:49.99999999999999%" class="column"><p id="74c9cbca-0c63-4aa9-a50e-2a5dc25218c9" class="">基于此大的前提，对市场上现有的figma插件进行调研，调研结果如下</p><figure id="f609ac3e-7636-432d-86a5-c477499625dc" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2025.png"><img style="width:384px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2025.png"/></a></figure><figure id="b05bf636-3ccf-4dab-99e6-8892e51c559e" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2026.png"><img style="width:904px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2026.png"/></a></figure></div></div><ul id="0cb767c5-d466-4666-86a7-ec5e86f1cadc" class="bulleted-list"><li><strong>需求文档梳理</strong></li></ul><p id="4d13c91d-2a32-47ea-8312-e88ab3161528" class="">需求文档的核心在于让开发人员能够看懂需求，所以<strong>名词解释</strong>，<strong>功能介绍</strong>都是重点，而产品的逻辑，则需要通过低保真的文件以及<strong>工作流</strong>来展现，这是产品需求文档最为关键的内容，决定了开发的方向。</p><div id="60f6438c-7e67-47c8-a223-1d2aabd9bb13" class="column-list"><div id="a31fe3a7-48b2-4a46-896f-6fa36092e9c0" style="width:50%" class="column"><figure id="b91e2ab2-4050-4126-ba26-4ed251ac382c" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2027.png"><img style="width:469px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2027.png"/></a></figure></div><div id="9fc7757e-efb5-4e4e-9f9b-5e57bbd99195" style="width:50%" class="column"><figure id="621c0d89-8190-458f-9619-9fc5a98eab86" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2028.png"><img style="width:384px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2028.png"/></a></figure></div></div><ul id="468f8f2a-7ad5-4152-a0db-025c965bfe38" class="bulleted-list"><li>高保真设计</li></ul><p id="62f34f3d-674d-489b-a232-90866221a054" class="">对产品的原型界面以及交互进行设计，对产品的开发逻辑进行实现。在满足逻辑与用户使用习惯的同时还应该考虑界面的美观，一般由UI设计师与UX设计师负责设计，最终作为前端开发的依据。（设计工具为figma）</p><figure id="b76e74ce-f681-43ce-8f86-2285ef2943c2" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2029.png"><img style="width:576px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2029.png"/></a></figure><ul id="33c42808-cf8f-4e3e-be83-d4f69ddf7590" class="bulleted-list"><li><strong>对接前端开发并持续协调</strong></li></ul><p id="171a03ea-e9bf-4929-8e11-2ef91c50a07c" class="">与前端的开发人员进行交流，解释需求细节以及交互逻辑，制定<strong>排期甘特图</strong>，并在开发过程中不断与前端开发人员与需求方进行对接。</p><figure id="0ffe171e-2171-4347-a758-10a7f345031b" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2030.png"><img style="width:1872px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2030.png"/></a></figure><h2 id="39c5dbdb-7faa-4fb7-bea6-d4a2e95fa743" class="">3、企业运行、管理及技术方面的认识及体会</h2><h3 id="a28a9aba-40d9-49ac-9f25-7bf95ca2fe46" class="">企业运行与管理</h3><p id="deaa4dba-4b2a-45a1-b03b-ee72f10d655b" class="">由于实习所在公司为创业公司，故在运行与管理的方面都比较扁平化，没有大厂复杂的管理架构和运行模式，但又正由于公司规模较小，不同部门之间的管理及协作也相对清晰，作为初创阶段的公司也经常进行运行与管理方面的改革，故也能体会到一个新兴的高技术创业公司在管理与运行方面的思考与探索。以下是我结合自身观察与一些前辈的经验而得到的认识与体会。</p><div id="c3f1c6e3-c97c-4ddd-a585-3490f628a47d" class="column-list"><div id="9e0bc090-0e54-4c66-ac87-d135af37002a" style="width:50.00000000000002%" class="column"><ul id="0487f206-29c8-4a76-a754-bbb70a077080" class="bulleted-list"><li><strong>一切工作都是人的工作，管理与业务是分不开的</strong><p id="46f7b598-db74-45c3-b99b-db5fa3cdf294" class="">很多时候在强调管理的重要性时经常会忽略业务在其中所起到的作用，尤其对于一个初创公司而言，公司的核心目标就是产出一个或者多个有价值、有市场竞争力的产品，而这时很重要的就是整个企业的效率。运行良好的标志就是有高效高质的产出，管理行为的目的也是如此。当管理与业务脱节的时候，对于管理者和被管理者都是极为不利的。管理与业务关联要紧密，这不仅指团队的领导者在业务方面需要有一定的了解与能力，也是指在管理时将业务与人联结起来，以业务作为管理的依据和目的。</p></li></ul></div><div id="7580b637-e6dd-488a-acf6-ecd834f753c9" style="width:50.000000000000014%" class="column"><ul id="06829d4d-92ba-4414-b0e9-dca229eb2118" class="bulleted-list"><li><strong>搭建领导梯队，作为教练、裁判，而不只是好的球员</strong><p id="ef9a7813-2c5c-43f9-8138-7d2f9a377612" class="">一个公司只有业务骨干是无法正常运作的，正如同一场足球比赛只有球员无法运作起来。对于创业公司而言，合伙人或是核心员工在业务能力上自然都有过人之处，但公司需要有人管理，也就是充当裁判和教练的角色。而需要做的是搭建领导的梯队，让业务骨干成为不同层级上的教练或是裁判，既不用专职管理，保持较高的效率，也可以发挥他们业务精良在管理上的优势。</p></li></ul></div></div><div id="2366bcb0-4e2f-4aa2-99c3-51ef5f24030a" class="column-list"><div id="05468d60-32db-4f8f-8372-c19f7aaf41ef" style="width:50%" class="column"><ul id="32c1416b-c45b-487e-818b-2d01f8dc3df9" class="bulleted-list"><li><strong>企业的本质永远是团队协作，任何个人都只是一份子</strong><p id="f550238b-1ffb-478c-892e-fff29eac7458" class="">事实就是现代企业之中，任何事务与项目都需要以团队协作的方式进行。能力再强，地位再高的个人也只是团队之中的一部分，无法脱离团队进行产出。而随着互联网的发展，协同的趋势还在进一步加强，这就意味着很多时候应该站在团队的视角上，不止是项目团队，开发团队，还可能是人事团队，管理团队，从团队的效率出发，以团队为单位进行管理，更加高效，也更有意义。</p></li></ul></div><div id="fa5bd7ce-81f5-49b0-8673-07f6bcc02982" style="width:50%" class="column"><ul id="b25d4a27-b411-4d0c-8618-8f52cbe354e2" class="bulleted-list"><li><strong>优秀的人喜欢和优秀的人共事，优秀的人更享受产生价值的过程</strong><p id="4c7936a0-e868-4311-a6f6-6d7ed1f9306f" class="">企业在招募员工时势必将优秀作为最重要的指标，但问题在于优秀的人往往成堆出现，这不止是优秀的人之间的相互吸引，也是优秀的人的带动作用。所以要想招募到优秀的员工，首先需要公司有一个优秀的氛围以及众多优秀的人。而优秀的人往往期望从事更有价值的工作，这个价值并非指工资或待遇，而是更加有意义的和战略性的，比如创造出最好的产品，改变人们对于一种事物的认知。真正优秀的人更加看重成就感与使命感，所以需要企业在文化与价值方面有吸引力。</p></li></ul></div></div><h3 id="e80c2272-a59b-49d3-b768-ed9ccd6d3645" class="">技术方面</h3><p id="a901032f-4c9a-43b2-ad87-7e3eb4f921c9" class="">由于本次实习的内容更加偏重于产品与设计知识方面，故自己的工作内容与技术相关的只有关于置信度算法的部分，而除此与前端开发前辈交流的过程中也对我有一定的启发。我所体会最深的分两个方面，分别是<strong>调研</strong>与<strong>测试</strong>。</p><div id="71f841e2-4a46-4335-9c9b-58477e753c0c" class="column-list"><div id="7ab7b1aa-c054-462c-a8a6-a1dbb429d65f" style="width:50%" class="column"><figure id="b827df09-f9d6-40b8-915f-8c14a8574790" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2031.png"><img style="width:415px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2031.png"/></a></figure></div><div id="4ce61dbb-18e7-48d9-a093-fa5f32027a6d" style="width:50%" class="column"><figure id="6e1ef1e3-fbd5-404e-83ae-502560d61aae" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2032.png"><img style="width:413px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/Untitled%2032.png"/></a></figure></div></div><h2 id="c5fbf295-ad96-4a4a-beec-fb004ddd73c2" class="">4、收获及心得</h2><h3 id="dc7fc03d-5d5f-48f6-bd4e-e868503de076" class="">一些较显性的收获</h3><ul id="1ac6a286-9ef4-4b2c-b277-9017e2f14461" class="toggle"><li><details open=""><summary><strong>知识与技能方面</strong></summary><ul id="9884d186-2a8f-45d3-aee6-756afec199c7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">掌握了一部分figma的相关操作，能够画一些简单的产品原型</span></li></ul><ul id="3e4502e6-4f69-45d0-8d34-9994c3689049" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">接触了okr的管理方法，能够以目标与行动的方式规划工作和学习</span></li></ul><ul id="9f93df3d-f527-4839-9238-f8e9ed2d35e3" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">较为熟练地掌握Markdown语法，能够以此进行简单的图文排版</span></li></ul><ul id="db5746aa-13a6-4d67-9440-d208363b1914" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">对软件著作权申报的流程有了比较深入的了解，会撰写可用的软件说明书</span></li></ul><ul id="273e4b19-ad0b-4631-a706-b8f54fb9136c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">学会用甘特图、树状图等工具清晰直观地表达信息与展示逻辑</span></li></ul><ul id="93665adf-ea66-4da8-9c4a-c605fdd5c81c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">大致了解LaTeX语法，并在文档编写的过程中加以应用</span></li></ul></details></li></ul><ul id="c62ca25a-c33d-4e9f-9cad-4fbf5b3c075d" class="toggle"><li><details open=""><summary><strong>产品与设计方面</strong></summary><ul id="1d06d1a1-5f4f-4074-8879-26f51874a312" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">了解产品从立项、确定需求、原型设计、前端开发、后端联调这一套的流程</span></li></ul><ul id="88de9264-34e9-44db-8654-e68b03d43a2b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">对图片，尤其是作为海报素材的图片的分类及特征有了一定了解</span></li></ul><ul id="1fd64604-f44e-444c-9cd4-1dc6403a6df4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">能够对于简单产品的交互逻辑以及工作流进行梳理</span></li></ul><ul id="0d42f2ac-0db8-4906-861b-b743046e740e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">体会到作为产品经理与需求、开发沟通的不易，也锻炼了相关能力</span></li></ul><ul id="f254abad-19d3-41d3-a800-dfd5485418a4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">体会到参与的产品最终落地的成就感</span></li></ul></details></li></ul><ul id="ef361983-8d80-40a6-aace-c429869fb0e0" class="toggle"><li><details open=""><summary><strong>其他方面</strong></summary><ul id="ba69d700-a03f-4f0e-8167-2cd3888624b4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">初步观察到创业公司的不易与从零开始做公司的乐趣</span></li></ul><ul id="76e86abf-6c09-4784-bcaf-d3b7f15ec3ed" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">认识了一些产品，管理以及开发的前辈，可以以后多和他们请教学习</span></li></ul><ul id="02a40653-79fb-40c3-8981-78993018551e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">体会到企业的运作方式与管理流程，对人际交往也有了学校外的一点经验</span></li></ul></details></li></ul><h3 id="e6be8698-0b30-4255-a6ed-392fb977a3a4" class="">一些实习期间的思考</h3><ul id="85357867-96c5-4d46-8b47-ebbc94a7f62f" class="bulleted-list"><li><strong>关于跨专业协作</strong></li></ul><p id="087bd877-96e7-433b-82b4-cd2678dda0f1" class="">由于公司项目的性质是人工智能加设计，所以在项目团队中，不仅会有计算机，人工智能领域的同学，还有完全设计背景的同学。而在这种有复杂的学科背景的团队之中，如何进行有效的团队协作是较为重要的问题，而本身作为交叉专业的学生，这种问题的回答更为重要。通过请教前辈以及在团队中的亲身感受，以下可能是跨专业协作中较为重要的几点：</p><ol type="1" id="f395c973-76db-4fc8-a200-80575b1c6832" class="numbered-list" start="1"><li><strong>不同专业语料之间的交流</strong><p id="c460d0f0-0c92-4066-b08e-0962858bb004" class="">这点具体是指，不同专业都有属于自己的术语，这种术语对于非本专业的团队成员来说，往往是难以理解的。更有可能，不同专业相同的词可能表达不同的意思，这就造成了沟通与理解时的巨大成本。所以可能的解决方法是建立专属于此团队的语料库，用以解释不同专业的专业术语，团队成员不断完善以及利用此语料库，以减少不同成员之间的沟通成本。</p></li></ol><ol type="1" id="3f09a25b-0ee7-4893-baf0-29eeb0590648" class="numbered-list" start="2"><li><strong>对其他领域人才的信任</strong><p id="a04aa88e-956f-4304-b8fb-67edbdbffeda" class="">之所以跨专业协作比较困难，是因为团队成员之间无法做到相互信任。拿产品开发的流程来说，产品经理无法信任设计师，对设计作品的美观性进行怀疑，而开发者又难以信任产品经理，怀疑其需求的合理性和必要性。实际上，跨专业合作的目的就是专业的人做专业的事，而这种目的能实现的前提就是不同专业人才的相互信任，能够相信别人在他们的专业领域的能力与眼光，才能高效无芥蒂的进行沟通与合作。</p></li></ol><ol type="1" id="14d1293b-d053-42ed-b196-5bf383e97011" class="numbered-list" start="3"><li><strong>带着方案进行沟通</strong><p id="d6eb5aa7-f844-41a5-aa68-35c89f0df6b9" class="">事实上就是，跨专业之间的协作本身就有着巨大的沟通需求，沟通是处理协作效率不高这一问题的有效手段，而一种比较合理且高效的手段就是带着方案交流。可能会有不同成员对于同一问题之间的分歧，但是单纯靠言语的交流有时候是无力的，这时候带着方案交流就很有必要，两种方案的初步实现就可能看出两者的高下。而另一种可能的情况是，开发端无法满足需求或是设计好的原型，这时候带着替代的方案交流可能更加高效也更有意义。</p></li></ol><ul id="0cbef1a8-da8a-4545-9377-d0e40b9c7c7f" class="bulleted-list"><li><strong>关于身份</strong></li></ul><p id="d5145d4f-4cf5-4703-b663-3b6e093736e1" class="">难以否认的一点是，在实习过程中，是难以摆脱自己的身份的。这里所说的身份，是指清华大学智能工程与创意设计专业大二学生。而之所以试图摆脱，是因为尽管实习公司本身就是来自清北的创业团队，这种身份仍然是特殊的，这种特殊性不仅来自学校，也来自专业。</p><p id="a50d6921-b7a4-4856-8717-29b8e1639664" class="">在寻找实习的阶段，我就曾不止一次地感受到这种身份的特殊性所带来的不同，多家公司愿意提供面试机会的原因我想是与学校有着非常大的关系，招聘网站打招呼时的那句“学弟好”就可以充分说明问题。也正因为如此，在进行每次面试时，我都异常地紧张，害怕自己表现糟糕而连累影响清华的形象。而除此之外，由于智能工程与创意设计专业是一个比较新的专业，我一般是面试官所面试的这一专业的第一位学生，如果无法有好的表现的话，也会影响企业对于本专业的印象。</p><p id="2061eabf-6193-43c0-809e-ad1d310247dd" class="">而这种特殊性在我进入公司后仍然没有改变，更多转变成了同事对于学校与专业的好奇，而在分配任务时也更倾向于给我较为脑力相关的工作，比如编写，总结，创造，而非机械重复的非脑力劳动。这让我在实习的经历之中获得了诸多的便利。但却让我处于长久的怀疑之中，怀疑所分配的工作是根据我的能力还是我的身份，怀疑给我的赞扬是否是一种基于身份的鼓励，怀疑我是否能体会到真实的企业内部，还是说我和真实之间隔了一层身份带来的厚厚障壁。</p><p id="f3bd8cbc-42ed-4f6a-ba5f-de7515864efb" class="">在学校的时候，由于所面对的是老师与同学，很少能体会到身份所带来的差异性与隔阂，但这次企业实践像是一个口子，让我第一次较长久地置身于学校之外的环境，如何处理这层身份所带来的优待与压力，偏见与隔阂都是我需要思考的问题。现在的我还无法找到合适的应对方式，但“如果我不是清华学生，这件事会怎样？”这个问题，我今后会常常去想。</p><h2 id="81c7e6e9-d06d-4e07-890d-34f6e34c7ffd" class="">5、企业实习证明</h2><p id="4cb20be9-6c33-4b1e-b950-affb8e19c752" class="">
+</p><figure id="30a6b644-9260-43fa-95d0-b515b3962f66" class="image"><a href="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/f1c78f1b5b588a5433e024e6c213fcb.jpg"><img style="width:576px" src="%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A%200fd6123f3aef4bed86e96705587877ff/f1c78f1b5b588a5433e024e6c213fcb.jpg"/></a></figure><p id="42fcfadc-01aa-4287-a625-90fb6d217b11" class="">
+</p></div></article></body></html>
